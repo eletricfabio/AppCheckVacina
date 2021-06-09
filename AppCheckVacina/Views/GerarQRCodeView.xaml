@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behaviorPack="clr-namespace:Xamarin.Forms.BehaviorValidationPack;assembly=Xamarin.Forms.BehaviorValidationPack"
+             x:Class="AppCheckVacina.Views.GerarQRCodeView"
+             Visual="Material"
+             Padding="0,10,0,0">
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <!--<Image Source="logoApp.png" 
+                   WidthRequest="25" 
+                   HeightRequest="25"/>-->
+            <Label Text="Gerar QRCode" VerticalTextAlignment="Center"
+                   FontAttributes="Bold"
+                   TextColor="White"
+                   FontSize="14"
+                   HorizontalTextAlignment="Center"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <StackLayout Orientation="Vertical">
+        <Image Source="im2.png"
+               Margin="0,20,0,0"
+               WidthRequest="100" 
+               HeightRequest="100"/>
+
+        <Label Margin="0,10,0,10" 
+               HorizontalOptions="Center"
+               Text="Cadastrar" 
+               FontAttributes="Bold"
+               FontSize="Large" 
+               TextColor="Gray" >
+        </Label>
+
+        <StackLayout x:Name="stkQR" VerticalOptions="Center" 
+                     HorizontalOptions="Center"
+                     WidthRequest="300">
+
+       
+            <Entry Placeholder="Nome completo" x:Name="Nome"
+                       TextColor="Black"/>
+            <Entry Placeholder="Vacinado (Sim / Não)" x:Name="txtValorQR" 
+                       TextColor="Black">
+                <Entry.Behaviors>
+                <behaviorPack:MaxLengthValidationBehavior MaxLength="3"/>
+                <behaviorPack:NumberValidationBehavior/>
+                </Entry.Behaviors>
+             </Entry>
+
+            <Button Text="Gerar QRCode" WidthRequest="300"
+                        Margin="0,10,0,10"
+                        BackgroundColor="#26d6b8"
+                        Clicked="btnGeneraCodigo_Clicked"
+                        FontSize="Large"
+                        FontAttributes="None"
+                        TextColor="White"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

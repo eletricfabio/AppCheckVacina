@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCheckVacina.Views.HomePage"
+             Visual="Material"
+             Padding="0,50,0,10"
+             BackgroundColor="#00dfbf">
+
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <!--<Image Source="logoApp.png" 
+                   WidthRequest="25" 
+                   HeightRequest="25"/>-->
+            <Label Text="Página Inicial" VerticalTextAlignment="Center"
+                   FontAttributes="Bold"
+                   TextColor="White"
+                   FontSize="14"
+                   HorizontalTextAlignment="Center"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <FlexLayout
+                Margin="0,0,0,30"
+                Padding="30,-70,30,30"
+                BackgroundColor="White"
+                VerticalOptions="FillAndExpand">
+
+            <StackLayout Orientation="Vertical">
+                <Image Source=""
+                       Margin="0,20,0,10"
+                       WidthRequest="100" 
+                       HeightRequest="100"/>
+                
+                <Grid Margin="5" ColumnSpacing="20" RowSpacing="30">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="230" />
+                        <RowDefinition Height="230" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <FlexLayout
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Padding="10"
+                            BackgroundColor="Transparent">
+                        <StackLayout>
+                            <ImageButton Source="im2"
+                                         Clicked="BtnGerarQRCode_Clicked"/>
+                            <Label
+                                    FontFamily="Verdana" 
+                                    FontSize="18"
+                                    HorizontalOptions="CenterAndExpand"
+                                    HorizontalTextAlignment="Center"
+                                    Text="Gerar QRCode Vacinado"
+                                    TextColor="#791AE5"
+                                    VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                    </FlexLayout>
+                    <FlexLayout
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Padding="10"
+                            BackgroundColor="White">
+                        <StackLayout>
+                            <ImageButton Source="im3"
+                                   Clicked="BtnLeitorQRCode_Clicked"/>
+                            <Label
+                                    FontFamily="Verdana" 
+                                    FontSize="18"
+                                    HorizontalOptions="CenterAndExpand"
+                                    HorizontalTextAlignment="Center"
+                                    Text="Leitor de QRCode"
+                                    TextColor="#791AE5"
+                                    VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                    </FlexLayout>
+                    <FlexLayout
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Padding="10"
+                            BackgroundColor="White">
+                        <StackLayout>
+                            <ImageButton Source="im1"
+                                   Clicked="BtnSintomas_Clicked"/>
+                            <Label
+                                    FontFamily="Verdana" 
+                                    FontSize="18"
+                                    HorizontalOptions="CenterAndExpand"
+                                    HorizontalTextAlignment="Center"
+                                    Text="Algum Sintoma?"
+                                    TextColor="#791AE5"
+                                    VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                    </FlexLayout>
+                    <FlexLayout
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Padding="10"
+                            BackgroundColor="White">
+                        <StackLayout>
+                            <ImageButton Source="im4"
+                                         Clicked="BtnEmergencia_Clicked"/>
+                            <Label
+                                    FontFamily="Verdana" 
+                                    FontSize="20"
+                                    HorizontalOptions="CenterAndExpand"
+                                    HorizontalTextAlignment="Center"
+                                    Text="Emergência Samu 192"
+                                    TextColor="#791AE5"
+                                    VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                    </FlexLayout>
+                </Grid>
+            </StackLayout>
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>

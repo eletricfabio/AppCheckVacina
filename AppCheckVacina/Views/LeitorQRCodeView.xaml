@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCheckVacina.Views.LeitorQRCodeView"
+             Visual="Material"
+             Padding="0,50,0,0">
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <!--<Image Source="logoApp.png" 
+                   WidthRequest="25" 
+                   HeightRequest="25"/>-->
+            <Label Text="Verificar Imunização" VerticalTextAlignment="Center"
+                   FontAttributes="Bold"
+                   TextColor="White"
+                   FontSize="14"
+                   HorizontalTextAlignment="Center"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <StackLayout Orientation="Vertical">
+        <Image Source="im3.png"
+               Margin="0,10,0,20"
+               WidthRequest="100" 
+               HeightRequest="100"/>
+
+        <StackLayout x:Name="stkQR" VerticalOptions="Center" 
+                     HorizontalOptions="Center"
+                     WidthRequest="300">
+
+
+            <Label Text="Verificar Vacinação" VerticalTextAlignment="Center"
+                   Margin="0,0,0,10"
+                   FontAttributes="Bold"
+                   TextColor="Gray"
+                   FontSize="Large"
+                   HorizontalTextAlignment="Center"/>
+            <Button x:Name="btnScannerQR" 
+                       Text="Ler QRCode" WidthRequest="300"
+                       Margin="0,10,0,50"
+                       BackgroundColor="#d62965"
+                       Clicked="btnScannerQR_Clicked"
+                       FontSize="Large"
+                       FontAttributes="Bold"
+                       TextColor="White"/>
+            <Entry x:Name="txtResultado" HorizontalTextAlignment="Center"
+                       Placeholder="Resultado" 
+                       Margin="50,0,50,0"
+                       WidthRequest="70" 
+                       HeightRequest="70"
+                       TextColor="#d62965"
+                       FontSize="Large"
+                       BackgroundColor="Transparent"
+                       IsEnabled="False"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
